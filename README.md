@@ -1,2 +1,2 @@
 # PowerShell-CheckLatestVersionUbuntu
-Check the latest version of ubuntu from PowerShell
+Check the latest version of ubuntu using PowerShell
