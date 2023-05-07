@@ -2,7 +2,6 @@
 $datetime = Get-Date -UFormat "%Y-%m-%dT%H:%M:%S.%3NZ"
 
 
-
 # Invoke-RestMethod to get data from Ubuntu.com
 function Get-VerUbuntuLTS{
     $responseLTS = Invoke-RestMethod -Uri "https://ubuntu.com/download/desktop"
@@ -10,7 +9,6 @@ function Get-VerUbuntuLTS{
     $ubuntuVerLTS = $ubuntuVerLTS.Replace("<h2>", "").Replace("</h2>","")
     $ubuntuVerLTS = $ubuntuVerLTS.Trim()
     Write-Host -ForegroundColor Green $datetime "- Latest version: " $ubuntuVerLTS
-
 }
 
 function Get-VerUbuntu{
@@ -21,8 +19,6 @@ function Get-VerUbuntu{
     $ubuntuVer = $ubuntuVer.Trim()
     Write-Host -ForegroundColor Green $datetime "- Latest version: " $ubuntuVer
 }
-
-
 
 # Call the functions
 Get-VerUbuntuLTS
